@@ -11,10 +11,10 @@
 }
 
 body {
-  margin: 10px;
+  margin: 0 3%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
   min-width: 320px;
   min-height: 100vh;
 }
