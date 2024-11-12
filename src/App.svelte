@@ -3,7 +3,7 @@
   import Header from "./components/header/Header.svelte";
 </script>
 
-<main>
+<main class="container">
   <Header />
   <p>{$_('description')}</p>
   <p>See how its deployed:</p>

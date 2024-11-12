@@ -2,19 +2,21 @@
 @import './styles/dark-theme.css';
 @import './styles/light-theme.css';
 
+@import "./styles/layouts/mobile.css";
+@import "./styles/layouts/tablet.css";
+@import "./styles/layouts/desktop.css";
+
 :root {
-  color-scheme: light dark; 
+  color-scheme: light dark;
   background-color: var(--background-color);
   color: var(--color);
 
   font-family: 'Roboto', sans-serif;
 }
 
-body {
-  margin: 0 3%;
+main {
   display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  min-width: 320px;
-  min-height: 100vh;
 }
+
+
+

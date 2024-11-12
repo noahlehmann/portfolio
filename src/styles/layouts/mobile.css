@@ -1,0 +1,10 @@
+@media (max-width: 600px) { /* Smartphone layout */
+    .container {
+        flex-direction: column; /* Stacks items vertically */
+        padding: 16px;
+    }
+    .child {
+        flex: 1 1 100%; /* Single-column full width */
+        margin: 8px 0; /* Adjust spacing for vertical layout */
+    }
+}
