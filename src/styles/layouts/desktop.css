@@ -1,15 +1,15 @@
 @media (min-width: 1024px) {
     .container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
-        padding: 24px;
+        min-width: 1024px;
         max-width: 1440px;
+        min-height: 100vh;
         margin: 0 auto;
     }
 
     .child {
         flex: 1 1 30%;
-        margin: 12px;
     }
 }

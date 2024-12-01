@@ -1,4 +1,7 @@
 {
     "welcome": "Welcome to my Portfolio",
-    "description": "A simple website"
+    "description": "A simple website",
+    "footer": {
+        "rights": "All rights reserved"
+    }
   }
