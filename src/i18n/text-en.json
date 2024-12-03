@@ -1,5 +1,10 @@
 {
-    "welcome": "Welcome to my Portfolio",
+    "header": {
+        "text": "So, how does this work?",
+        "menu": {
+            "about": "whoami"
+        }
+    },
     "description": "A simple website",
     "footer": {
         "rights": "All rights reserved"
