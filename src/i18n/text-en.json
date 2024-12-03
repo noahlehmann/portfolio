@@ -5,7 +5,11 @@
             "about": "whoami"
         }
     },
-    "description": "A simple website",
+    "home": {
+        "welcome": {
+            "text": "Hi, my name is Noah, I am a software engineer from Germany ..."
+        }
+    },
     "footer": {
         "rights": "All rights reserved"
     }

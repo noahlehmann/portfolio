@@ -3,7 +3,7 @@
 </script>
 
 <button class="menu-button">
-    <p>{text}</p>
+    {text}
 </button>
 
 <style>
