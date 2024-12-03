@@ -1,5 +1,10 @@
 {
-    "welcome": "Willkommen bei meinem Portfolio",
+    "header": {
+        "text": "Und wie funktioniert das?",
+        "menu": {
+            "about": "whoami"
+        }
+    },
     "description": "Eine einfache Website",
     "footer": {
         "rights": "Alle Rechte vorbehalten"
