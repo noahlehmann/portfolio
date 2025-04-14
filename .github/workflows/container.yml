@@ -29,10 +29,7 @@ jobs:
 
       - name: Build and Push Web Image
         run: |
-          docker build ${{ env.WEB_PATH }} \
-            -f ${{ env.WEB_PATH }}/Containerfile \
-            -t ${{ env.GHCR_REPOSITORY }}/ping:${{ env.TAG_NAME }} \
-            --build-arg PING_PORT=${{ env.PING_PORT }} \
+          docker build -f ${{ env.WEB_PATH }}/Containerfile -t ${{ env.GHCR_REPOSITORY }}/ping:${{ env.TAG_NAME }} --build-arg PING_PORT=${{ env.PING_PORT }} ${{ env.WEB_PATH }}
           docker tag ${{ env.GHCR_REPOSITORY }}/ping:${{ env.TAG_NAME }} ${{ env.GHCR_REPOSITORY }}/ping:latest
           docker push ${{ env.GHCR_REPOSITORY }}/ping:${{ env.TAG_NAME }}
           docker push ${{ env.GHCR_REPOSITORY }}/ping:latest
