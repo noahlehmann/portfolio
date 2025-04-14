@@ -1,0 +1,36 @@
+name: Deploy
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    env:
+      GHCR_REPOSITORY: ghcr.io/noahlehmann/portfolio
+      PING_PATH: src/web
+      TAG_NAME: ${{ github.ref_name }}
+      PING_PORT: 8080
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Build and Push Web Image
+        run: |
+          docker build ${{ env.WEB_PATH }} \
+            -f ${{ env.WEB_PATH }}/Containerfile \
+            -t ${{ env.GHCR_REPOSITORY }}/ping:${{ env.TAG_NAME }} \
+            --build-arg PING_PORT=${{ env.PING_PORT }} \
+          docker tag ${{ env.GHCR_REPOSITORY }}/ping:${{ env.TAG_NAME }} ${{ env.GHCR_REPOSITORY }}/ping:latest
+          docker push ${{ env.GHCR_REPOSITORY }}/ping:${{ env.TAG_NAME }}
+          docker push ${{ env.GHCR_REPOSITORY }}/ping:latest
