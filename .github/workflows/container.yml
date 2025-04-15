@@ -16,7 +16,7 @@ jobs:
 
     env:
       GHCR_REPOSITORY: ghcr.io/noahlehmann/portfolio
-      PING_PATH: ./ping
+      PING_PATH: ./api/ping
       TAG_NAME: ${{ github.ref_name }}
       PING_PORT: 8080
 
